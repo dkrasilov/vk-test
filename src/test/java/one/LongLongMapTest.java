@@ -68,4 +68,15 @@ class LongLongMapTest {
     }
 
 
+    @Test
+    void shouldReturnOldValueOnPutWithSameKey() {
+        final long size = 1024;
+        final long address = unsafe.allocateMemory(size);
+        final LongLongMap longLongMap = new LongLongMap(unsafe, address, size);
+
+        assertEquals(0, longLongMap.put(1, 123));
+        assertEquals(123, longLongMap.put(1, 421));
+    }
+
+
 }

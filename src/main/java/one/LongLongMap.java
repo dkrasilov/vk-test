@@ -73,8 +73,9 @@ public class LongLongMap {
         if (hasValue(recordMeta)) {
             final long recordKey = getRecordKey(recordAddress);
             if (recordKey == k) {
+                final long oldValue = getRecordValue(recordAddress);
                 unsafe.putLong(recordAddress + LONG_SIZE * 2, v);
-                return getRecordValue(recordAddress);
+                return oldValue;
             } else {
                 // Well, we have a collision
                 if (hasNext(recordMeta)) {
