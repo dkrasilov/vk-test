@@ -1,4 +1,4 @@
-![maven](https://github.com/dkrasilov/vk-long-long-map/workflows/maven/badge.svg)
+[![maven](https://github.com/dkrasilov/vk-long-long-map/workflows/maven/badge.svg)](https://github.com/dkrasilov/vk-long-long-map/actions)
 # Ассоциативный массив Long-Long
 В исходных данных имеем: 
 ```
